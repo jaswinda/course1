@@ -1,12 +1,47 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Course'),
+  runApp(const MaterialApp(home: Home()));
+}
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+          myRow(),
+        ],
       ),
-      body: Container(child: Center(child: Text('I am String'))),
-    ),
-  ));
+    );
+  }
+
+  Widget myRow() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+      ],
+    );
+  }
 }
